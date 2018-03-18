@@ -27,9 +27,9 @@ public class BusinessCardReader { //Sets up public class
        return emailAddress; //Returns the email address to the user
    }
     public static void main(String[] args) throws FileNotFoundException {
-        java.io.File file = new java.io.File("ExampleThree.dat"); //File ExampleOne contains the data of Mike Smith, ExampleTwo contains the data
+        java.io.File file = new java.io.File("ExampleOne.dat"); //File ExampleOne contains the data of Mike Smith, ExampleTwo contains the data
                                                                 //of Lisa Huang and FileThree contains the data of Arthur Wilson
-        FileReader readBusinessCard = new FileReader("ExampleThree.dat"); //The FileReader reads the incoming file
+        FileReader readBusinessCard = new FileReader("ExampleOne.dat"); //The FileReader reads the incoming file
         Scanner contactInfoScanner = new Scanner (file); //Scanner analyzes the file part by part
         
         Pattern nameFinder = Pattern.compile("(^[A-Z][a-z]*)[\\s]([A-Z][a-z]*)$"); 
