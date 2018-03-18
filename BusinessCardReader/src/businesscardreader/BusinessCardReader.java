@@ -32,11 +32,11 @@ public class BusinessCardReader { //Sets up public class
         FileReader readBusinessCard = new FileReader("ExampleOne.dat"); //The FileReader reads the incoming file
         Scanner contactInfoScanner = new Scanner (file); //Scanner analyzes the file part by part
         
-        Pattern nameFinder = Pattern.compile("(^[A-Z][a-z]*)[\\s]([A-Z][a-z]*)$"); 
+        Pattern nameFinder = Pattern.compile("(^(?!Software)[A-Z][a-z]*)[\\s]([A-Z][a-z]*)$"); 
         /*
         Search for a pattern starting with one capital letter followed by any amount of lower case letters followed by one space followed by a word
         starting with a capital letter which is then followed by any number of lower case letters. The $ sign means it should be concluded with the
-        end of the line
+        end of the line. A check has been implemented that will not accept a string starting with the word "Software".
         */
         
         Pattern phoneNumberFinder = Pattern.compile("^(Phone:|Tel:)?[\\s]?[+]?[0-9]?[\\s]?[(]?[0-9]{3,10}[)]?[-]?[\\s]?[0-9]{3,7}[-]?[0-9]{4}$");

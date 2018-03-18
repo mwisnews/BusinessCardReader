@@ -52,7 +52,8 @@ business card is "Software Engineer". This is because both "Arthur Wilson" and "
 pattern I had set up. "Arthur Wilson" is passed first and so the program sets the name to "Arthur Wilson" but then this gets
 overwritten by "Software Engineer" which becomes the output. I thought about this issue and determined that to improve the
 program, one would need to implement some Named-entity Recognition (NER) to determine whether the string in question is a
-name or a title.
+name or a title. For this purpose, I have implemented a check that will not print to name if the word "Software" is included
+at the start of the line. This is a quick fix to the one issue but will not always work.
 
 Thank you for reading this far, I know this is quite a bit of text. I hope you enjoy the program, I have a busy week ahead
 with 4 tests to prepare for and a paper to submit.
